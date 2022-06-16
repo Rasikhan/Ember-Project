@@ -1,0 +1,46 @@
+//table-new-component
+.table {
+    width: 100%;
+    margin: 10px;
+    padding: 10px;
+}
+
+.mob-row{
+    border:1px solid black;
+}
+
+.mob-column{
+    border:1px solid black;
+    text-align: center;
+}
+
+.mobRow-true{
+    background-color:burlywood;
+}
+
+.mobRow-false{
+    background-color: white;
+}
+
+.total{
+    margin-left: 50%;
+    background-color: beige;
+    width: fit-content;
+    margin-top: 20px;
+}
+
+.tot-mob-col{
+    background-color: #c0e0ad;
+}
+
+.totalPrice{
+    background-color: whitesmoke;
+    width: auto;
+}
+
+
+//route
+.login {
+    margin: 25px;
+    padding: 10%;
+}

@@ -1,0 +1,38 @@
+{{!-- template-lint-disable block-indentation --}}
+<div class="table">
+      {{!-- template-lint-disable block-indentation --}}
+      <h1>{{title}}</h1>
+  <table class="table table-bordered">
+    <thead class="table-header">
+      <th>Id</th>
+      <th>Product</th>
+      <th>Description</th>
+      <th>Type</th>
+      <th>Price</th>
+      <th>Actions</th>
+    </thead>
+    <tbody>
+      {{#each productLists  as |productList index|}}
+        <tr>
+          {{! template-lint-disable block-indentation }}
+          <td>
+            {{! template-lint-disable self-closing-void-elements }}
+            <input type="checkbox" name="checkbox" id="check"  onclick={{action "checkBoxClick" productList}}/>
+            {{inc index}}</td>
+          <td>{{productList.name}}</td>
+          <td>{{productList.description}}</td>
+          <td>{{productList.type}}</td>
+          <td>{{productList.price}}</td>
+
+          {{#if (not (eq productList.type "apparel"))}}
+            <td>
+              <button type="button" class="btn btn-info"  onclick={{action "remove" productList.id}}>Del</button>
+            </td>
+          {{/if}}
+        </tr>
+      {{/each}}
+    </tbody>
+  </table>
+</div>
+
+{{total-products mobiles=checkedMobiles}}

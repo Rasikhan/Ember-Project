@@ -1,0 +1,20 @@
+{{#if (gt totalPrice 0)}}
+  <div class="total">
+    {{!-- template-lint-disable table-groups --}}
+    <table class="mobile-table table-striped">
+      <tr>
+        <th class="mob-column tot-mob-col">Id</th>
+        <th class="mob-column tot-mob-col">Name</th>
+        <th class="mob-column tot-mob-col">Price</th>
+      </tr>
+      {{#each mobiles as |mob index|}}
+        <tr>
+          <td class="mob-column tot-mob-col">{{index}}</td>
+          <td class="mob-column tot-mob-col">{{mob.name}}</td>
+          <td class="mob-column tot-mob-col">{{mob.price}}</td>
+        </tr>
+      {{/each}}
+    </table>
+    <div class="totalPrice">Total-Bill: {{totalPrice}}</div>
+  </div>
+{{/if}}
